@@ -406,146 +406,144 @@ footer {
   text-decoration: none;
   font-family: var(--poppins);
 }
-/*deskop version biasa*/
-@media (min-width: 992px) {
-  /*navbar*/
-  .navbar {
-    padding: 0.5rem 3rem;
-    background: transparent;
-  }
-  .navbar .navbar-nav .nav-item {
-    padding: 3px 10px;
-  }
 
-  @supports (background-clip: text) and (-webkit-text-fill-color: transparent) {
-    .navbar .navbar-nav .nav-item a {
-      background-image: linear-gradient(
-        to right,
-        var(--purple),
-        var(--lightpurple)
-      );
-      background-size: 200%;
-      transition: 0.5s ease-out;
+/*navbar*/
+.navbar {
+  padding: 0.5rem 3rem;
+  background: transparent;
+}
+.navbar .navbar-nav .nav-item {
+  padding: 3px 10px;
+}
 
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+@supports (background-clip: text) and (-webkit-text-fill-color: transparent) {
+  .navbar .navbar-nav .nav-item a {
+    background-image: linear-gradient(
+      to right,
+      var(--purple),
+      var(--lightpurple)
+    );
+    background-size: 200%;
+    transition: 0.5s ease-out;
 
-  .navbar .navbar-nav .nav-item a:hover {
-    background-position: -100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+}
 
-  #dropdown {
-    display: none;
-  }
-  /* jumbotron */
-  .jumbotron .text {
-    padding-left: 4rem;
-    top: 36%;
-    position: absolute;
-  }
-  .jumbotron .text h2 {
-    text-transform: uppercase;
-    font-family: var(--lato);
-    font-size: 30px;
-    font-weight: 300;
-    padding-top: 0;
-  }
-  .jumbotron .text h1 {
-    text-transform: capitalize;
-    font-family: var(--abril);
-    font-size: 85px;
-    color: black;
-  }
-  .jumbotron .text span {
-    color: var(--purple);
-  }
-  .jumbotron .text h3 {
-    text-transform: capitalize;
-    font-family: var(--poppins);
-    font-size: 26px;
-    font-weight: 400;
-    display: flex;
-    padding-bottom: 25px;
-  }
+.navbar .navbar-nav .nav-item a:hover {
+  background-position: -100%;
+}
 
-  .jumbotron .sosial-media a {
-    text-decoration: none;
-    color: var(--lightgray);
-    padding-right: 25px;
-    width: 70px;
-    height: 70px;
-  }
-  .jumbotron .sosial-media a:hover {
-    color: var(--purple);
-  }
-  /*About*/
-  .text-about {
-    padding: 10rem 0 0 4rem;
-  }
-  .text-about h1 {
-    font-size: 65px;
-  }
-  .text-about span {
-    color: var(--purple);
-  }
-  .text-about p {
-    font-size: 25px;
-  }
-  #about {
-    background-image: url(picture/let.png);
-    background-size: cover;
-    margin-top: 0%;
-  }
-  .about-img {
-    padding-top: 5rem;
-  }
-  /*project*/
-  #carouselExampleFade .carousel-inner .carousel-item img {
-    height: 80vh;
-  }
-  .title-project h1 {
-    font-size: 65px;
-    padding-left: 4rem;
-  }
-  /*skills&tools*/
-  #skills {
-    background-image: url(picture/let.png);
-    background-size: cover;
-  }
+#dropdown {
+  display: none;
+}
+/* jumbotron */
+.jumbotron .text {
+  padding-left: 4rem;
+  top: 36%;
+  position: absolute;
+}
+.jumbotron .text h2 {
+  text-transform: uppercase;
+  font-family: var(--lato);
+  font-size: 30px;
+  font-weight: 300;
+  padding-top: 0;
+}
+.jumbotron .text h1 {
+  text-transform: capitalize;
+  font-family: var(--abril);
+  font-size: 85px;
+  color: black;
+}
+.jumbotron .text span {
+  color: var(--purple);
+}
+.jumbotron .text h3 {
+  text-transform: capitalize;
+  font-family: var(--poppins);
+  font-size: 26px;
+  font-weight: 400;
+  display: flex;
+  padding-bottom: 25px;
+}
 
-  .title-skills h1 {
-    padding-left: 4rem;
-    font-size: 65px;
-  }
-  .gambar-skills {
-    padding-left: 4rem;
-  }
-  /*promise*/
-  #promise {
-    background-image: url(picture/2.png);
-    background-size: cover;
-  }
-  .promise-title h1 {
-    font-size: 65px;
-    text-align: center;
-  }
-  #promise .datar-promise {
-    margin: 0 4.5rem;
-  }
-  /*testimonial*/
-  #testimonial .one {
-    padding-top: 6rem;
-    padding-left: 3rem;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  #testimonial .two {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  .contact-title h1 {
-    font-size: 65px;
-  }
+.jumbotron .sosial-media a {
+  text-decoration: none;
+  color: var(--lightgray);
+  padding-right: 25px;
+  width: 70px;
+  height: 70px;
+}
+.jumbotron .sosial-media a:hover {
+  color: var(--purple);
+}
+/*About*/
+.text-about {
+  padding: 10rem 0 0 4rem;
+}
+.text-about h1 {
+  font-size: 65px;
+}
+.text-about span {
+  color: var(--purple);
+}
+.text-about p {
+  font-size: 25px;
+}
+#about {
+  background-image: url(picture/let.png);
+  background-size: cover;
+  margin-top: 0%;
+}
+.about-img {
+  padding-top: 5rem;
+}
+/*project*/
+#carouselExampleFade .carousel-inner .carousel-item img {
+  height: 80vh;
+}
+.title-project h1 {
+  font-size: 65px;
+  padding-left: 4rem;
+}
+/*skills&tools*/
+#skills {
+  background-image: url(picture/let.png);
+  background-size: cover;
+}
+
+.title-skills h1 {
+  padding-left: 4rem;
+  font-size: 65px;
+}
+.gambar-skills {
+  padding-left: 4rem;
+}
+/*promise*/
+#promise {
+  background-image: url(picture/2.png);
+  background-size: cover;
+}
+.promise-title h1 {
+  font-size: 65px;
+  text-align: center;
+}
+#promise .datar-promise {
+  margin: 0 4.5rem;
+}
+/*testimonial*/
+#testimonial .one {
+  padding-top: 6rem;
+  padding-left: 3rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#testimonial .two {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.contact-title h1 {
+  font-size: 65px;
 }
