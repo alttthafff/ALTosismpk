@@ -407,7 +407,7 @@ footer {
   font-family: var(--poppins);
 }
 /*deskop version biasa*/
-@media (min-width: 100px) {
+@media (min-width: 992px) {
   /*navbar*/
   .navbar {
     padding: 0.5rem 3rem;
@@ -494,7 +494,7 @@ footer {
     font-size: 25px;
   }
   #about {
-    background-image: url(picture/2.png);
+    background-image: url(picture/.png);
     background-size: cover;
     margin-top: 0%;
   }
