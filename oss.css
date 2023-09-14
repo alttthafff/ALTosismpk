@@ -235,12 +235,6 @@ nav ul ul ul li {
   padding-top: 9rem;
 }
 /*project*/
-#project {
-  padding: 5rem 0;
-  background-image: url(picture/.png);
-  background-size: cover;
-  background-attachment: fixed;
-}
 #carouselExampleFade .carousel-control-prev {
   background-color: var(--lightpurple);
   border-radius: 50%;
