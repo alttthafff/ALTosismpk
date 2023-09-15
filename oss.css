@@ -29,8 +29,16 @@
   font-family: var(--poppins);
   background-color: white;
 }
-.navbar-toggler {
+.navbar.toggler {
   border: none !important;
+}
+.navbar .kici {
+  float: left;
+  padding-left: 150px;
+  position: absolute;
+  display: inline-block;
+  
+  
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -84,7 +92,11 @@
   color: var(--white);
   transition: 0.5;
 }
-
+.kici{
+  width: 10px;
+  height: 10px;
+  position:fixed;
+}
 #home {
   padding: 5rem 0;
   background-image: url(picture/ye.png);
