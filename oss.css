@@ -32,14 +32,6 @@
 .navbar.toggler {
   border: none !important;
 }
-.navbar .kici {
-  float: left;
-  padding-left: 150px;
-  position: absolute;
-  display: inline-block;
-  
-  
-}
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -71,7 +63,7 @@
   height: 210px;
   text-decoration: none;
   list-style-type: none;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 .nav-item .dropdown ul li {
