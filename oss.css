@@ -350,22 +350,29 @@ nav ul ul ul li {
   padding-left: 15px;
 }
 #testimonial .one i {
-  color: var(--purple);
+  color:#ffffff;
   padding-bottom: 15px;
 }
 #testimonial .one h4 {
   font-family: var(--poppins);
   font-weight: 400;
   font-size: 25px;
+  color: #ffffff;
   padding-bottom: 15px;
 }
 #testimonial .one h2 {
   font-size: 35px;
   font-family: var(--poppins);
   font-weight: 600;
-  color: var(--purple);
-  padding-bottom: 2rem;
+  color:#ffffff;
+  padding-bottom: 5rem;
 }
+.img-bun{
+  padding: 4rem 2;
+  float:right;
+  padding-left: 90px;
+}
+
 /*Contact*/
 #contact {
   padding: 6rem 0;
