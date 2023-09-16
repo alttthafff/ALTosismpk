@@ -692,4 +692,25 @@ footer {
   .contact-title h1 {
     font-size: 65px;
   }
+
+  /* laptop */
+
+  @media (max-width: 992px) {
+    html {
+      font-size: 75%;
+    }
+  }
+
+  /* mobile */
+  @media (max-width: 576px) {
+    
+    html {
+      font-size: 60%;
+    }
+    #about {
+      font-size: 20%;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
