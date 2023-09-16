@@ -149,6 +149,7 @@
     background-color: #ccc;
   }
 }
+
 /* Hide Dropdowns by Default */
 nav ul ul {
   display: none;
@@ -279,6 +280,71 @@ nav ul ul ul li {
   color: var(--purple);
 }
 
+/* cards border */
+.cards {
+  width: 350px;
+  height: 500px;
+  background: rgb(103, 225, 255);
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 900;
+}
+img{
+  object-fit: cover;
+}
+.grid > article img{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.cards:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  background: rgb(103, 151, 255);
+  content: url(picture/satu.png) ;
+}
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.cards:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+
+.cards:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+}
+
+
 /*skills&toools*/
 #skills {
   padding: 4rem 0;
@@ -365,7 +431,13 @@ nav ul ul ul li {
   font-family: var(--poppins);
   font-weight: 600;
   color:#ffffff;
-  padding-bottom: 5rem;
+
+}
+#testimonial .one h3 {
+  font-size: 25px;
+  font-family: var(--poppins);
+  font-weight: 200;
+  color:#ffffff;
 }
 .img-bun{
   padding: 4rem 2;
