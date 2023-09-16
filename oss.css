@@ -371,7 +371,7 @@ nav ul ul ul li {
 #skills .container-fluid .gambar-skills .col-lg-3 img:hover {
   filter: invert(15%);
 }
-/*Promise*/
+/*Tugas Tugas*/
 
 .promise-title h1 {
   text-transform: capitalize;
@@ -405,9 +405,10 @@ nav ul ul ul li {
 }
 /* card tugas */
 .card {
-  margin-left:50px;
+  margin-left:20px;
+  margin-bottom: 20px;
   width: 350px;
-  height: 500px;
+  height: 600px;
   background:#A9A9A9;
   transition: all 0.4s;
   border-radius: 10px;
