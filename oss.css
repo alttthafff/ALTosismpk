@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+.h1 span {
+  font-family: "Bebas Neue", sans-serif;
+}
+
 /* Main Color */
 :root {
   --lightpurple: #535353;
@@ -103,7 +109,7 @@
 }
 .jumbotron .text h1 {
   text-transform: capitalize;
-  font-family: var(--abril);
+  font-family: "Bebas Neue", sans-serif;
   font-size: 75px;
   color: black;
   overflow: hidden;
@@ -141,8 +147,8 @@
 }
 .jumbotron .text span {
   color: var(--purple);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 150%;
 }
 
 .jumbotron .text h3 {
@@ -166,15 +172,14 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 /*About*/
-.wave-header0{
+.wave-header0 {
   width: 100%;
-  background:#ffffff;
-  position: relative;
-  
+  background: #ffffff;
+  position: sticky;
 }
 
-svg{
-  position: absolute;
+svg {
+  position: sticky;
   bottom: 0;
   left: 0;
 }
@@ -210,13 +215,29 @@ svg{
   padding-top: 9rem;
 }
 /*project*/
-.wave-header{
-  width: 100%;
-  background: #ffffff;
+#picture{
   position: relative;
-  justify-content: center;
-  align-items: center;
 }
+.custom-shape-divider-top-1696142465 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1696142465 svg {
+  position: relative;
+  display: block;
+  width: calc(119% + 1.3px);
+  height: 431px;
+}
+
+.custom-shape-divider-top-1696142465 .shape-fill {
+  fill: #191919;
+}
+
 #carouselExampleFade .carousel-control-prev {
   background-color: var(--lightpurple);
   border-radius: 50%;
@@ -252,20 +273,19 @@ svg{
 
 /* cards border */
 
-#project{
+#project {
   background-repeat: no-repeat;
   padding-bottom: 100px;
 }
 
-.wave-header2{
+.wave-header2 {
   width: 100%;
-  background:#ffffff;
-  position: relative;
-  
+  background: #ffffff;
+  position: sticky;
 }
 
-svg{
-  position: absolute;
+svg {
+  position: sticky;
   bottom: 0;
   left: 0;
 }
@@ -274,7 +294,7 @@ svg{
   margin-left: 100px;
   margin-right: 100px;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   padding-bottom: 50px;
   justify-content: center;
@@ -283,7 +303,7 @@ svg{
 }
 
 .cardd {
-  border: 7px solid rgb(0, 0, 0) ;
+  border: 7px solid rgb(0, 0, 0);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
   border-top-left-radius: 50%;
   border-bottom-right-radius: 40%;
@@ -292,7 +312,7 @@ svg{
 }
 
 .gallery img {
-  max-width:100%;
+  max-width: 100%;
   border-top-left-radius: 5%;
   border-bottom-right-radius: 5%;
   border-top-right-radius: 5%;
@@ -300,19 +320,19 @@ svg{
 }
 
 .img-title {
-  position:absolute;
+  position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(5, 5, 5, .7);
+  background-color: rgba(5, 5, 5, 0.7);
 }
 
-.img-title p,h3{
+.img-title p,
+h3 {
   text-align: center;
   line-height: 2px;
-  position:relative;
+  position: relative;
   top: 130px;
-  text-shadow: rgba(5, 5, 5, .5);
-
+  text-shadow: rgba(5, 5, 5, 0.5);
 }
 /*skills&toools*/
 #skills {
@@ -346,19 +366,18 @@ svg{
 }
 /*Tugas Tugas*/
 
-.wave-header3{
+.wave-header3 {
   width: 100%;
-  background:#ffffff;
+  background: #ffffff;
   position: relative;
-  
 }
 
-svg{
+svg {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.promise-title{
+.promise-title {
   margin-top: 100;
 }
 .promise-title h1 {
@@ -495,6 +514,7 @@ svg{
   font-family: var(--poppins);
   font-weight: 200;
   color: #ffffff;
+  display: flex;
 }
 .img-bun {
   padding: 4rem 2;
@@ -552,6 +572,20 @@ footer {
   }
   .navbar .navbar-nav .nav-item {
     padding: 3px 10px;
+  }
+
+  @media screen and (max-width: 576px) {
+    .waves {
+      margin-top: 150px;
+      margin-bottom: 70px;
+    }
+
+    .botWaves {
+      margin-top: -5px;
+    }
+    .wavesContact {
+      margin-bottom: -5px;
+    }
   }
 
   @supports (background-clip: text) and (-webkit-text-fill-color: transparent) {
@@ -696,5 +730,14 @@ footer {
 
   /* mobile */
   @media (min-width: 576px) {
+    #h1-home {
+      font-size: 1rem;
+    }
+    .wave-header {
+      padding-top: 100px;
+      height: 40%;
+    }
   }
 }
+
+
