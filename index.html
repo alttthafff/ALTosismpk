@@ -1,18 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Versatile Disc</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body bgcolor="#eee">
-    <center>
-    <marquee direction="down" width="1330" height="640" behavior="alternate" >
-    <marquee behavior="alternate">
-        <img src="picture/DVD_logo.png" width="200">
-    </marquee>
-    </center>
-</marquee>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAITING PAGE</title>
+    <link href="oss.css" rel="stylesheet" type="text/css" />
+    <!-- countdown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+    <script src="countdown/simplyCountdown.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/logo.png" class="logo" />
+
+      <div class="content">
+        <h3 class="back">Website Is Under Maintenance</h3>
+        <h1>We'Re <span>Launching Soon</span></h1>
+
+        <div class="simply-countdown"></div>
+
+        <button type="button"><a href="https://althaf2.odoo.com/" class="button">Learn More</a>
+           <img src="images/triangle.png" alt="" />
+        </button>
+      </div>
+      <img src="images/rocket.png" class="rocket" />
+      <img src="images/osis.png" class="osis" />
+      <img src="images/mpk.png" class="mpk" />
+    </div>
+
+    <script>
+      simplyCountdown(" .simply-countdown", {
+        year: 2023, // required
+        month: 11, // required
+        day: 11, // required
+        hours: 12, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "day", plural: "days" },
+          hours: { singular: "hour", plural: "hours" },
+          minutes: { singular: "minute", plural: "minutes" },
+          seconds: { singular: "second", plural: "seconds" },
+        },
+        plural: true, //use plurals
+        inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
+        inlineClass: "simply-countdown-inline", //inline css span class in case of inline = true
+        // in case of inline set to false
+        enableUtc: false,
+        onEnd: function () {
+          // your code
+          return;
+        },
+      });
+    </script>
+  </body>
 </html>
