@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -64,19 +65,24 @@
 
 .content button {
   background: transparent;
-  border: 5px solid #000000;
+  border: 5px solid rgba(83, 0, 207, 0.3);
   outline: none;
   padding: 12px 20px;
-  color: #000000;
+  color: #ffffff;
   display: flex;
   align-items: center;
   margin-top: 30px;
   cursor: pointer;
-  border-radius: 50%;
+  
 }
 
 .button {
-  color: #ffffff;
+  color: #000000;
+}
+
+.learn{
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .content button img {
@@ -145,6 +151,7 @@
   .simply-countdown > .simply-section {
     padding: 70px;
   }
+  
 }
 
 /* tablet */
@@ -179,5 +186,14 @@
   }
   .logo{
     width:140px;
+  }
+  .osis {
+    right:60%;
+  }
+  .rocket{
+    right:0%;
+  }
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 5rem;
   }
 }

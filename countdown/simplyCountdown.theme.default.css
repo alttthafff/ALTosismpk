@@ -24,3 +24,14 @@
 .simply-countdown > .simply-section .simply-amount {
   font-size: 2rem;
 }
+
+@media (max-width: 576px) {
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 5rem;
+  }
+  .simply-countdown > .simply-section .simply-word {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+  }
+}

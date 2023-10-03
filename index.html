@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WAITING PAGE</title>
     <link href="oss.css" rel="stylesheet" type="text/css" />
-    <!-- countdown -->
     <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
     <script src="countdown/simplyCountdown.min.js"></script>
   </head>
@@ -23,7 +22,7 @@
 
         <div class="simply-countdown"></div>
 
-        <button type="button"><a href="https://althaf2.odoo.com/" class="button">Learn More</a>
+        <button type="button"><a href="https://althaf2.odoo.com/" class="button"><a class="learn">Learn More To Feature</a>
            <img src="images/triangle.png" alt="" />
         </button>
       </div>
@@ -34,24 +33,22 @@
 
     <script>
       simplyCountdown(" .simply-countdown", {
-        year: 2023, // required
-        month: 11, // required
-        day: 11, // required
-        hours: 12, // Default is 0 [0-23] integer
+        year: 2023, 
+        month: 11, 
+        day: 11, 
+        hours: 12, 
         words: {
-          //words displayed into the countdown
+         
           days: { singular: "day", plural: "days" },
           hours: { singular: "hour", plural: "hours" },
           minutes: { singular: "minute", plural: "minutes" },
           seconds: { singular: "second", plural: "seconds" },
         },
-        plural: true, //use plurals
-        inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
-        inlineClass: "simply-countdown-inline", //inline css span class in case of inline = true
-        // in case of inline set to false
+        plural: true, 
+        inline: false, 
+        inlineClass: "simply-countdown-inline", 
         enableUtc: false,
         onEnd: function () {
-          // your code
           return;
         },
       });
@@ -62,7 +59,7 @@
       const textArray = ["OSIS DAN MPK "];
       const typingDelay = 100;
       const erasingDelay = 100;
-      const newTextDelay = 2500; // Delay between current and next text
+      const newTextDelay = 2500;
       let textArrayIndex = 0;
       let charIndex = 0;
 
@@ -99,7 +96,6 @@
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        // On DOM Load initiate the effect
         if (textArray.length) setTimeout(type, newTextDelay + 250);
       });
     </script>
