@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link
@@ -58,6 +58,7 @@
 
     <title>Official Osis</title>
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -528,7 +529,7 @@
             cursorSpan.classList.add("typing");
           typedTextSpan.textContent = textArray[textArrayIndex].substring(
             0,
-            charIndex - 1
+            charIndex - 1,
           );
           charIndex--;
           setTimeout(erase, erasingDelay);
