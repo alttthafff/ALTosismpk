@@ -6,7 +6,14 @@
   font-family: "Bebas Neue", sans-serif;
   box-sizing: border-box;
 }
-
+.h1 {
+  padding-left: 5px;
+  padding-bottom: 0;
+  font-size: 10px;
+  font-weight: 100;
+  align-items: center;
+  color:#FD8D14;
+}
 .container {
   width: 100vw;
   height: 100vh;
@@ -17,11 +24,13 @@
   position: relative;
 }
 
+.simply-countdown{
+ padding-left: 30px;
+}
 .logo {
   width: 180px;
-  padding: 10px 0;
-  padding-top: 30px;
   cursor: pointer;
+  padding-bottom: 30px;
 }
 
 .content {
@@ -31,16 +40,16 @@
   color: #fff;
 }
 .content h3 {
-  padding-left: 20px;
+  padding-left: 0px;
   font-size: 20px;
   font-weight: 100;
   align-items: center;
 }
 
 .back {
-  background-color: rgba(10, 10, 10, 0.3);
+  background-color: rgba(83, 0, 207, 0.3);
   border-radius: 50px;
-  width: 250px;
+  width: 200px;
 }
 .content h1 {
   font-size: 7rem;
@@ -52,25 +61,28 @@
   color: #5d12d2;
 }
 
+
 .content button {
   background: transparent;
-  border: 2px solid #fff;
+  border: 5px solid #000000;
   outline: none;
-  padding: 12px 25px;
-  color: #fff;
+  padding: 12px 20px;
+  color: #000000;
   display: flex;
   align-items: center;
   margin-top: 30px;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .button {
-  color: #fff;
+  color: #ffffff;
 }
 
 .content button img {
   width: 15px;
   margin-left: 10px;
+  color: #000000;
 }
 
 .launch-time {
@@ -153,7 +165,7 @@
     font-size: 50%;
   }
   .simply-countdown > .simply-section {
-    padding: 10px;
+    padding: 10px 10px;
     margin: 0;
   }
   .container {
@@ -163,7 +175,9 @@
     color: #ff3753;
   }
   .simply-section {
-   
     padding: 20px;
+  }
+  .logo{
+    width:140px;
   }
 }
