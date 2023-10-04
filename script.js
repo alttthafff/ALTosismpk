@@ -53,6 +53,69 @@ document.addEventListener("DOMContentLoaded", function () {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
+// slider
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelector(".dots-container");
+
+let currentSlide = 1;
+
+function toggleDotClass() {
+  for (const dot of dots.children) {
+    // remove all classes first
+    dot.classList.remove("active");
+
+    if (dot.dataset.slide == currentSlide) {
+      dot.classList.add("active");
+    }
+  }
+}
+
+function moveSlide() {
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${currentSlide * 100 - 100}%)`;
+  });
+
+  if (currentSlide > slides.length) {
+    currentSlide = 1;
+  }
+
+  toggleDotClass();
+}
+
+// listen to buttons
+dots.addEventListener("click", (e) => {
+  const dot = e.target;
+
+  // only works if clicking on span
+  if (dot.tagName == "SPAN") {
+    currentSlide = parseInt(dot.dataset.slide);
+    moveSlide();
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (currentSlide <= 1) {
+    currentSlide = 4;
+  } else {
+    currentSlide -= 1;
+  }
+
+  moveSlide();
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentSlide >= slides.length) {
+    currentSlide = 1;
+  } else {
+    currentSlide += 1;
+  }
+
+  moveSlide();
+});
+
 // form
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbyryaU-KiFb08lpVh-oX93cfQUVIY0eqyBaOvOTH4bNhMmSThbh1AUxTV34DVG1GoQMNQ/exec";
