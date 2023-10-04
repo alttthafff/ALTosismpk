@@ -91,7 +91,7 @@
               <a class="nav-link" href="#project">picture</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">OSIS</a>
+              <a class="nav-link" href="#tugas">OSIS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills">MPK</a>
@@ -105,7 +105,7 @@
     </nav>
 
     <!-- Jumbotron -->
-    <section id="home" class="main-section">
+    <section id="home">
       <div class="hero__text">
         <h2 class="animate__animated animate__bounce infinitegithogit">
           Welcome
@@ -118,12 +118,11 @@
         <h3 class="lead">Official Website</h3>
       </div>
 
-      <!-- Sosial Media -->
       <div class="sosial-media">
         <a
           href="https://www.instagram.com/osismpkmetland.school/"
           target="blank">
-          <i class="fab fa-instagram fa-2x"> </i>
+          <i class="fab fa-instagram fa-2x"></i>
           <h6>osismpkmetland.school</h6>
         </a>
         <a href="https://www.instagram.com/smkmetland/" target="blank">
@@ -153,62 +152,64 @@
         <h2 class="project-isi">Picture</h2>
       </div>
 
-      <div
-        id="carouselExampleFade"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel">
-        <div class="carousel-inner justify-content-center">
-          <div class="carousel-item active justify-content-center d-flex">
-            <a href="https://engxzu.netlify.app/" target="blank"
-              ><img
-                src="picture/kor.JPG"
-                class="d-block w-85 img-fluid"
-                alt="Engxzu"
-            /></a>
+      <div class="main-section__content">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel">
+          <div class="carousel-inner justify-content-center">
+            <div class="carousel-item active justify-content-center d-flex">
+              <a href="https://engxzu.netlify.app/" target="blank"
+                ><img
+                  src="picture/kor.JPG"
+                  class="d-block w-85 img-fluid"
+                  alt="Engxzu"
+              /></a>
+            </div>
+            <div class="carousel-item justify-content-center d-flex">
+              <a href="" target="blank"
+                ><img
+                  src="picture/struktur.jpg"
+                  class="d-block w-85 img-fluid"
+                  alt="Vencvel"
+              /></a>
+            </div>
+            <div class="carousel-item justify-content-center d-flex">
+              <a
+                href="https://drive.google.com/drive/folders/1nM_4UYVsR1XMu4_yabZRRGQWidNuyUV-?usp=drive_link"
+                target="blank"
+                ><img
+                  src="picture/kok.png"
+                  class="d-block w-85 img-fluid"
+                  alt="Management-Project-Task-UI-Design-by-Elvina"
+              /></a>
+            </div>
+            <div class="carousel-item justify-content-center d-flex">
+              <a href="https://dictionorycdn.vercel.app/" target="blank"
+                ><img
+                  src="picture/17.jpg"
+                  class="d-block w-85 img-fluid"
+                  alt="Dictionory api"
+              /></a>
+            </div>
           </div>
-          <div class="carousel-item justify-content-center d-flex">
-            <a href="" target="blank"
-              ><img
-                src="picture/struktur.jpg"
-                class="d-block w-85 img-fluid"
-                alt="Vencvel"
-            /></a>
-          </div>
-          <div class="carousel-item justify-content-center d-flex">
-            <a
-              href="https://drive.google.com/drive/folders/1nM_4UYVsR1XMu4_yabZRRGQWidNuyUV-?usp=drive_link"
-              target="blank"
-              ><img
-                src="picture/kok.png"
-                class="d-block w-85 img-fluid"
-                alt="Management-Project-Task-UI-Design-by-Elvina"
-            /></a>
-          </div>
-          <div class="carousel-item justify-content-center d-flex">
-            <a href="https://dictionorycdn.vercel.app/" target="blank"
-              ><img
-                src="picture/17.jpg"
-                class="d-block w-85 img-fluid"
-                alt="Dictionory api"
-            /></a>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </section>
 
@@ -217,7 +218,7 @@
       <div class="main-section__text">
         <h2>Osis<span> Division</span></h2>
       </div>
-      <div class="gallery">
+      <div class="main-section__content gallery">
         <div class="cardd">
           <img src="KOOR/bph.png" alt="" />
           <div class="img-title">
@@ -250,112 +251,87 @@
     </section>
 
     <!-- Tugas Tugas -->
-    <section id="promise" class="main-section">
+    <section id="tugas" class="main-section">
       <div class="main-section__text">
         <h2>Tugas-Tugas <span>divisi</span></h2>
       </div>
 
-      <div class="row datar-promise d-flex justify-content-center">
-        <div class="col-lg-6 col-md-6 isi-card d-flex justify-content-center">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                Sekbid keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa
-              </h5>
-              <ol class="card-text">
-                <li>
-                  Melaksanakan peribadatan sesuai dengan ketentuan agama
-                  masing-masing
-                </li>
-                <li>Memperingati hari-hari besar keagamaan</li>
-                <li>
-                  Melaksanakan perbuatan amaliah sesuai dengan norma agama
-                </li>
-                <li>Membina toleransi kehidupan antar umat beragama</li>
-                <li>Mengadakan kegiatan lomba yang bernuansa keagamaan</li>
-                <li>
-                  Mengembangkan dan memberdayakan kegiatan keagamaan di sekolah
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 isi-card d-flex justify-content-center">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                Sekbid budi pekerti luhur atau akhlak mulia
-              </h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 isi-card d-flex justify-content-center">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Good Comunication</h5>
-              <p class="card-text">
-                Communication is definitely the most important in work, i can
-                speak english a little bit.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 isi-card d-flex justify-content-center">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Healty Relationship</h5>
-              <p class="card-text">
-                No dramas or difficult relationships. I’m here to make your life
-                easier, solve your problems, and grow your bussiness.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row datar-promise d-flex justify-content-center">
-          <div class="col-lg-6 col-md-6 isi-card d-flex justify-content-center">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">
-                  Sekbid keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa
-                </h5>
-                <ol class="card-text">
-                  <li>
-                    Melaksanakan peribadatan sesuai dengan ketentuan agama
-                    masing-masing
-                  </li>
-                  <li>Memperingati hari-hari besar keagamaan</li>
-                  <li>
-                    Melaksanakan perbuatan amaliah sesuai dengan norma agama
-                  </li>
-                  <li>Membina toleransi kehidupan antar umat beragama</li>
-                  <li>Mengadakan kegiatan lomba yang bernuansa keagamaan</li>
-                  <li>
-                    Mengembangkan dan memberdayakan kegiatan keagamaan di
-                    sekolah
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="main-section__content card-container">
+        <article class="card">
+          <h5 class="card-title">
+            Sekbid keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa
+          </h5>
+          <ol class="card-text">
+            <li>
+              Melaksanakan peribadatan sesuai dengan ketentuan agama
+              masing-masing
+            </li>
+            <li>Memperingati hari-hari besar keagamaan</li>
+            <li>Melaksanakan perbuatan amaliah sesuai dengan norma agama</li>
+            <li>Membina toleransi kehidupan antar umat beragama</li>
+            <li>Mengadakan kegiatan lomba yang bernuansa keagamaan</li>
+            <li>
+              Mengembangkan dan memberdayakan kegiatan keagamaan di sekolah
+            </li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">
+            Sekbid budi pekerti luhur atau akhlak mulia
+          </h5>
+          <p class="card-text"></p>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">Good Comunication</h5>
+          <p class="card-text">
+            Communication is definitely the most important in work, i can speak
+            english a little bit.
+          </p>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">Healty Relationship</h5>
+          <p class="card-text">
+            No dramas or difficult relationships. I’m here to make your life
+            easier, solve your problems, and grow your bussiness.
+          </p>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">
+            Sekbid keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa
+          </h5>
+          <ol class="card-text">
+            <li>
+              Melaksanakan peribadatan sesuai dengan ketentuan agama
+              masing-masing
+            </li>
+            <li>Memperingati hari-hari besar keagamaan</li>
+            <li>Melaksanakan perbuatan amaliah sesuai dengan norma agama</li>
+            <li>Membina toleransi kehidupan antar umat beragama</li>
+            <li>Mengadakan kegiatan lomba yang bernuansa keagamaan</li>
+            <li>
+              Mengembangkan dan memberdayakan kegiatan keagamaan di sekolah
+            </li>
+          </ol>
+        </article>
       </div>
     </section>
 
     <!-- Testimonial-->
     <section id="testimonial" class="main-section">
-      <div class="container-fluid">
-        <div class="row justify-content-center d-flex row-testi">
-          <div class="col-lg-5 one" img src="picture/1.png" width="300">
-            <i class="fas fa-quote-left fa-4x"></i>
-            <h4>MINTA QUOTES NYA BUND HEHE</h4>
-            <h2>Winda Sulistio Ningsih S.S</h2>
-            <h3>-Pembina Osis-</h3>
-          </div>
-          <div class="col-lg-5 two">
-            <img src="picture/bunda.png" class="img-bun" width="400" />
-          </div>
-        </div>
+      <div class="main-section__content quote">
+        <article>
+          <i class="fas fa-quote-left fa-4x"></i>
+          <blockquote>MINTA QUOTES NYA BUND HEHE</blockquote>
+          <h2>Winda Sulistio Ningsih S.S</h2>
+          <h3>-Pembina Osis-</h3>
+        </article>
+        <figure>
+          <img src="picture/bunda.png" class="img-bun" width="400" />
+        </figure>
       </div>
     </section>
 
@@ -365,82 +341,76 @@
         <h2>Contact <span>Me</span></h2>
       </div>
 
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-5 justify-content-center d-flex img-contact">
+      <div class="main-section__content form-container">
+        <div class="img-contact">
           <img src="picture/email.png" class="img-fluid" alt="" width="422" />
         </div>
-        <div class="col-lg-7 d-flex justify-content-center">
-          <div class="col-md-6">
-            <div
-              class="alert alert-info alert-dismissible fade show my-alert d-none"
-              role="alert">
-              <strong>Thank You!</strong> We have received your message.
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="alert"
-                aria-label="Close"></button>
-            </div>
-            <form name="contact-my-website">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  aria-describedby="name"
-                  name="nama" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="email"
-                  name="email" />
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Message</label
-                >
-                <textarea
-                  class="form-control"
-                  id="pesan"
-                  rows="3"
-                  name="pesan"></textarea>
-              </div>
-              <button type="submit" class="btn btn-kirim send float-end">
-                Send
-              </button>
 
-              <button
-                class="btn-load btn-loading float-end d-none"
-                type="button"
-                disabled>
-                <span
-                  class="spinner-border spinner-border-sm"
-                  role="status"
-                  aria-hidden="true"></span>
-                Loading...
-              </button>
-            </form>
-          </div>
+        <div
+          class="alert alert-info alert-dismissible fade show my-alert d-none"
+          role="alert">
+          <strong>Thank You!</strong> We have received your message.
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"></button>
         </div>
+        <form name="contact-my-website">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="name"
+              name="nama" />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="email"
+              name="email" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Message</label
+            >
+            <textarea
+              class="form-control"
+              id="pesan"
+              rows="3"
+              name="pesan"></textarea>
+          </div>
+          <button type="submit" class="btn btn-kirim send float-end">
+            Send
+          </button>
+
+          <button
+            class="btn-load btn-loading float-end d-none"
+            type="button"
+            disabled>
+            <span
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"></span>
+            Loading...
+          </button>
+        </form>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start d-flex justify-content-between">
-      <div class="text-center p-3 footer">
-        <a class="text-dark fs-6" href="">@2023althafdeveloped</a>
+    <footer>
+      <div>
+        <p>@2023althafdeveloped</p>
       </div>
-      <div class="text-center p-3 footer">
+      <div>
         <i class="fab fa-instagram fa-2x"></i>
-        <a
-          class="text-dark fs-6"
-          href="https://www.instagram.com/mr.althf/"
-          target="_blank">
+        <a href="https://www.instagram.com/mr.althf/" target="_blank">
           Follow My instagram
         </a>
       </div>
