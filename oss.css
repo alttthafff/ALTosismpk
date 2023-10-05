@@ -1,8 +1,6 @@
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -29,22 +27,54 @@ body {
   font-family: var(--poppins);
 }
 
+figure,
+blockquote {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0;
+}
+
+h1 {
+  line-height: 0.9;
+}
+
+h2 {
+  line-height: 1;
+}
+
 ::selection {
   color: var(--lightpurple);
   background: CornflowerBlue;
   background-color: var(--black);
 }
 
+button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--lightpurple);
+}
+
 .btn {
+  background: var(--lightgray);
   padding: 1rem;
-  display: none;
   margin-block: 1rem;
-  margin-inline: auto;
 }
 
 /*Navbar*/
 nav {
   background-color: white;
+  outline: 2px solid var(--purple);
 
   display: flex;
   justify-content: space-between;
@@ -70,25 +100,27 @@ nav ul {
 
 .nav-item {
   letter-spacing: 2px;
-  font-weight: 550;
-  color: black;
-  text-decoration: none;
+  transition: background 200ms ease;
 }
 
 nav a {
   display: block;
   text-decoration: none;
-  padding: 1.5rem 1rem;
-  font-weight: 400;
+  padding: 1rem 1.5rem;
   font-size: 20px;
   text-transform: uppercase;
-  color: black;
+  color: inherit;
 }
 
 .nav-item:hover {
   background-color: var(--purple);
 }
 
+nav .logo {
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+}
 
 .main-section {
   padding: 4rem;
@@ -103,8 +135,6 @@ nav a {
   text-transform: capitalize;
   font-family: var(--abril);
   font-size: 50px;
-  text-align: center;
-  padding-bottom: 2rem;
   text-align: center;
 }
 
@@ -137,6 +167,14 @@ nav a {
   min-height: 80vh;
 }
 
+#home h1 .cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
 #home h2 {
   text-transform: uppercase;
   font-family: var(--lato);
@@ -145,12 +183,31 @@ nav a {
 }
 
 #home h1 {
+  margin-block: 0 0.2rem;
   text-transform: capitalize;
   font-family: var(--lato);
   font-weight: bold;
   font-size: 75px;
   color: black;
   overflow: hidden;
+}
+
+#home .lead {
+  margin-block: 0;
+}
+
+.sosial-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.sosial-media a {
+  text-decoration: none;
+  color: var(--lightgray);
+}
+
+.sosial-media a:hover {
+  color: var(--purple);
 }
 
 @keyframes blink {
@@ -174,36 +231,6 @@ nav a {
   }
 }
 
-#home h1 .cursor {
-  display: inline-block;
-  background-color: #ccc;
-  margin-left: 0.1rem;
-  width: 3px;
-  animation: blink 1s infinite;
-}
-
-#home h3 {
-  text-transform: capitalize;
-  font-size: 24px;
-  font-weight: 400;
-  display: flex;
-  padding-bottom: 25px;
-}
-
-.sosial-media {
-  display: flex;
-  gap: 1rem;
-}
-
-.sosial-media a {
-  text-decoration: none;
-  color: var(--lightgray);
-}
-
-.sosial-media a:hover {
-  color: var(--purple);
-}
-
 /*About*/
 #about {
   text-align: center;
@@ -215,10 +242,11 @@ nav a {
 
 /*project*/
 .slide-container {
-  overflow: hidden;
   aspect-ratio: 16 / 9;
   max-width: 75ch;
   margin-inline: auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
   display: flex;
 }
 
@@ -266,11 +294,8 @@ nav a {
   gap: 1rem;
 }
 
-.button-container button {
-  all: unset;
+.button-container .btn {
   user-select: none;
-  outline: 1px solid #ddd;
-  padding: 1rem;
 }
 
 .button-container button:hover {
@@ -289,16 +314,16 @@ nav a {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
   gap: 1rem;
   justify-content: center;
   align-items: center;
 }
 
 .cardd {
-  border: 7px solid rgb(0, 0, 0);
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-  border-radius: 5% 0 5% 0;
+  border: 2px solid var(--purple);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.705);
+  border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
 }
@@ -317,14 +342,14 @@ nav a {
 /*Tugas Tugas*/
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(45ch, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(40ch, 100%), 1fr));
   gap: 1rem;
 }
 
 /* card tugas */
 .card {
   background: #a9a9a9;
-  border: 3px solid var(--lightpurple);
+  border: 2px solid var(--purple);
   padding: 1.5rem 1.5rem;
   border-radius: 10px;
   transition:
@@ -382,7 +407,7 @@ nav a {
   padding-bottom: 15px;
 }
 
-..quote__author {
+.quote__author {
   font-weight: bold;
 }
 
@@ -444,6 +469,10 @@ textarea {
   outline: 2px solid var(--lightpurple);
 }
 
+#form .btn {
+  display: none;
+}
+
 #form .btn.show {
   display: block;
 }
@@ -487,6 +516,7 @@ footer a {
 
   #nav-link-container {
     background: #ddd;
+    border-bottom: 2px solid var(--purple);
     width: 100%;
     position: absolute;
     top: 100%;
