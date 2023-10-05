@@ -120,26 +120,32 @@ nextBtn.addEventListener("click", () => {
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbyryaU-KiFb08lpVh-oX93cfQUVIY0eqyBaOvOTH4bNhMmSThbh1AUxTV34DVG1GoQMNQ/exec";
 const form = document.forms["contact-my-website"];
-const btnKirim = document.querySelector(".btn-kirim");
-const btnLoading = document.querySelector(".btn-loading");
-const btnDAlert = document.querySelector(".my-alert");
+const btnKirim = document.querySelector(".btn--submit");
+const btnLoading = document.querySelector(".btn--loading");
+
+const alertModal = document.querySelector(".form-alert");
+const alertCloseBtn = document.querySelector(".form-alert .btn--close");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  // ketika tombol submit di klik
-  // tampilkan tombol loading , hilangkan tombol kirim
-  btnLoading.classList.toggle("d-none");
-  btnKirim.classList.toggle("d-none");
+  btnLoading.classList.toggle("show");
+  btnKirim.classList.toggle("show");
+
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       // tampilkan tombol kirim , hilangkan tombol loading
-      btnLoading.classList.toggle("d-none");
-      btnKirim.classList.toggle("d-none");
+      btnLoading.classList.toggle("show");
+      btnKirim.classList.toggle("show");
+
       // tampilkan alert
-      btnDAlert.classList.toggle("d-none");
-      // reset tulisan input form nya
+      alertModal.showModal();
+
       form.reset();
       console.log("Success!", response);
     })
     .catch((error) => console.error("Error!", error.message));
+});
+
+alertCloseBtn.addEventListener("click", () => {
+  alertModal.close();
 });

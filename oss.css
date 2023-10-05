@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Main Color */
 :root {
   --lightpurple: #535353;
@@ -29,6 +33,13 @@ body {
   color: var(--lightpurple);
   background: CornflowerBlue;
   background-color: var(--black);
+}
+
+.btn {
+  padding: 1rem;
+  display: none;
+  margin-block: 1rem;
+  margin-inline: auto;
 }
 
 /*Navbar*/
@@ -78,11 +89,6 @@ nav a {
   background-color: var(--purple);
 }
 
-.kici {
-  width: 10px;
-  height: 10px;
-  position: fixed;
-}
 
 .main-section {
   padding: 4rem;
@@ -176,15 +182,7 @@ nav a {
   animation: blink 1s infinite;
 }
 
-#home h1 .typing {
-  animation: none;
-}
-
-#home .text span {
-  color: var(--purple);
-}
-
-#home .text h3 {
+#home h3 {
   text-transform: capitalize;
   font-size: 24px;
   font-weight: 400;
@@ -218,7 +216,9 @@ nav a {
 /*project*/
 .slide-container {
   overflow: hidden;
-  height: 40ch;
+  aspect-ratio: 16 / 9;
+  max-width: 75ch;
+  margin-inline: auto;
   display: flex;
 }
 
@@ -315,15 +315,6 @@ nav a {
 }
 
 /*Tugas Tugas*/
-.promise-title h1 {
-  margin-top: 200px;
-  text-transform: capitalize;
-  font-family: var(--abril);
-  font-size: 50px;
-  text-align: left;
-  padding-bottom: 2rem;
-}
-
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(45ch, 100%), 1fr));
@@ -360,51 +351,7 @@ nav a {
   color: #ffffff;
 }
 
-.first-content {
-  height: 100%;
-  width: 100%;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  border-radius: 15px;
-  font-size: larger;
-}
-
-.first-content.h1 {
-  width: 100px;
-  height: 100px;
-  font-size: medium;
-}
-
-.card:hover .first-content {
-  height: 0px;
-  opacity: 0;
-}
-
-.second-content {
-  height: 0%;
-  width: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  transition: all 0.4s;
-  font-size: 0px;
-  transform: rotate(90deg) scale(-1);
-}
-
-.card:hover .second-content {
-  opacity: 1;
-  height: 100%;
-  font-size: 1.8rem;
-  transform: rotate(0deg);
-}
-
 /*Testimonial*/
-
 #testimonial {
   padding: 4rem 0;
 }
@@ -412,7 +359,6 @@ nav a {
 .quote {
   background-color: var(--lightpurple);
   border-radius: 0.5rem;
-  padding: 2rem;
   color: #ddd;
 
   display: flex;
@@ -421,23 +367,29 @@ nav a {
   flex-wrap: wrap;
 }
 
-.quote h4 {
+.quote__text {
+  padding: 2rem;
+  max-width: 75ch;
+}
+
+.quote__text figcaption {
+  padding-block: 1rem;
+  font-style: italic;
+
   font-weight: 400;
   font-size: 25px;
   color: #ffffff;
   padding-bottom: 15px;
 }
 
-.quote h2 {
-  font-size: 35px;
-  font-weight: 600;
-  color: #ffffff;
+..quote__author {
+  font-weight: bold;
 }
 
-.quote h3 {
-  font-size: 25px;
-  font-weight: 200;
-  color: #ffffff;
+.quote__image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /*Contact*/
@@ -451,19 +403,49 @@ nav a {
   justify-content: center;
 }
 
-#contact form .form-label {
+.form-alert {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+.form-alert::backdrop {
+  backdrop-filter: blur(1rem);
+}
+
+#form {
+  flex-basis: 75ch;
+}
+
+#form .form-label {
   font-family: var(--poppins);
-  font-size: 22px;
+  display: block;
+  padding-block: 1rem 0.5rem;
 }
 
-#contact form input {
-  border-radius: 0%;
-  color: var(--purple);
+#form input,
+textarea {
+  all: unset;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0.5rem;
+  outline: 2px solid var(--purple);
+  padding: 1rem;
+  color: inherit;
+  display: block;
+  width: 100%;
 }
 
-#contact textarea {
-  border-radius: 0%;
-  color: var(--purple);
+#form textarea {
+  height: 35ch;
+}
+
+#form :is(input:focus-visible, textarea:focus-visible) {
+  outline: 2px solid var(--lightpurple);
+}
+
+#form .btn.show {
+  display: block;
 }
 
 /* Footer */
@@ -495,114 +477,6 @@ footer a {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-}
-
-#dropdown {
-  display: none;
-}
-
-#home .text h2 {
-  text-transform: uppercase;
-  font-family: var(--lato);
-  font-size: 30px;
-  font-weight: 300;
-  padding-top: 0;
-}
-
-#home .text h1 {
-  text-transform: capitalize;
-  font-family: var(--abril);
-  font-size: 85px;
-  color: black;
-}
-
-#home .text span {
-  color: var(--purple);
-}
-
-#home .text h3 {
-  text-transform: capitalize;
-  font-family: var(--poppins);
-  font-size: 26px;
-  font-weight: 400;
-  display: flex;
-  padding-bottom: 25px;
-}
-
-#home .sosial-media a {
-  text-decoration: none;
-  color: var(--lightgray);
-}
-
-/*About*/
-.text-about {
-  padding: 10rem 0 0 4rem;
-}
-
-.text-about h1 {
-  font-size: 65px;
-}
-
-.text-about span {
-  color: var(--purple);
-}
-
-.text-about p {
-  font-size: 25px;
-}
-
-#about {
-  background-image: url(picture/.png);
-  background-size: cover;
-  margin-top: 0%;
-}
-
-.about-img {
-  padding-top: 5rem;
-}
-
-.title-project h1 {
-  font-size: 65px;
-  padding-left: 4rem;
-}
-
-/*skills&tools*/
-#skills {
-  background-image: url(KOOR/KOOR2.pn);
-  background-size: cover;
-}
-
-.title-skills h1 {
-  padding-left: 4rem;
-  font-size: 65px;
-}
-.gambar-skills {
-  padding-left: 4rem;
-}
-/*promise*/
-#promise {
-  background-image: url(picture/2.png);
-  background-size: cover;
-}
-.promise-title h1 {
-  font-size: 65px;
-  text-align: center;
-}
-
-/*testimonial*/
-#testimonial .one {
-  padding-top: 6rem;
-  padding-left: 3rem;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-#testimonial .two {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.contact-title h1 {
-  font-size: 65px;
 }
 
 @media screen and (max-width: 50em) {
