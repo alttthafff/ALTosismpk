@@ -1,103 +1,388 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WAITING PAGE</title>
-    <link href="oss.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
-    <script src="countdown/simplyCountdown.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- AOS Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--Link ke css-->
+    <link rel="stylesheet" href="oss.css" />
+
+    <!-- Logo -->
+    <link rel="shortcut icon" href="picture/log.png" type="image/png" />
+
+    <!--Google Font-->
+
+    <!--poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Abril Fatface -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet" />
+
+    <!-- Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet" />
+
+    <title>Official Osis</title>
   </head>
+
   <body>
-    <div class="container">
-      <img src="images/logo.png" class="logo" />
-
-      <div class="content">
-        <h3 class="back">Website Is Under Maintenance</h3>
-        <h1 class="elv">
-          <span class="span elvina typed-text"></span
-          ><span class="cursor">&nbsp;</span>
-        </h1>
-        <h1>We'Re <span>Launching Soon</span></h1>
-
-        <div class="simply-countdown"></div>
-
-        <button type="button"><a href="https://althaf2.odoo.com/" class="button"><a href="https://althaf2.odoo.com/" a class="learn">Learn More To Feature</a>
-           <img src="images/triangle.png" alt="" />
-        </button>
+    <!-- Navbar -->
+    <nav>
+      <button
+        id="navbar-open"
+        data-bs-toggle="collapse"
+        data-bs-target="#nav-link-container"
+        aria-controls="nav-link-container"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="nav-link-container">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project">Gambar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tugas">OSIS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">MPK</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact">Kontak</a>
+          </li>
+        </ul>
       </div>
-      <img src="images/rocket.png" class="rocket" />
-      <img src="images/osis.png" class="osis" />
-      <img src="images/mpk.png" class="mpk" />
-    </div>
 
-    <script>
-      simplyCountdown(" .simply-countdown", {
-        year: 2023, 
-        month: 11, 
-        day: 11, 
-        hours: 12, 
-        words: {
-         
-          days: { singular: "day", plural: "days" },
-          hours: { singular: "hour", plural: "hours" },
-          minutes: { singular: "minute", plural: "minutes" },
-          seconds: { singular: "second", plural: "seconds" },
-        },
-        plural: true, 
-        inline: false, 
-        inlineClass: "simply-countdown-inline", 
-        enableUtc: false,
-        onEnd: function () {
-          return;
-        },
-      });
-    </script>
-    <script>
-      const typedTextSpan = document.querySelector(".typed-text");
-      const cursorSpan = document.querySelector(".cursor");
-      const textArray = ["OSIS DAN MPK "];
-      const typingDelay = 100;
-      const erasingDelay = 100;
-      const newTextDelay = 2500;
-      let textArrayIndex = 0;
-      let charIndex = 0;
+      <div class="logo">
+        <img
+          src="picture/osis.png"
+          alt="logo OSIS SMK Metland"
+          width="70"
+          height="60" />
+        <img
+          src="picture/mpk.png"
+          alt="logo MPK SMK Metland"
+          width="60"
+          height="40" />
+      </div>
+    </nav>
 
-      function type() {
-        if (charIndex < textArray[textArrayIndex].length) {
-          if (!cursorSpan.classList.contains("typing"))
-            cursorSpan.classList.add("typing");
-          typedTextSpan.textContent +=
-            textArray[textArrayIndex].charAt(charIndex);
-          charIndex++;
-          setTimeout(type, typingDelay);
-        } else {
-          cursorSpan.classList.remove("typing");
-          setTimeout(erase, newTextDelay);
-        }
-      }
+    <!-- Jumbotron -->
+    <section id="home">
+      <div class="hero__text">
+        <h2 class="animate__animated animate__bounce infinitegithogit">
+          Selamat datang
+        </h2>
+        <h1>
+          <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+        </h1>
+        <h5 class="lead">smk metland</h5>
+        <h3 class="lead">Situs web resmi</h3>
+      </div>
 
-      function erase() {
-        if (charIndex > 0) {
-          if (!cursorSpan.classList.contains("typing"))
-            cursorSpan.classList.add("typing");
-          typedTextSpan.textContent = textArray[textArrayIndex].substring(
-            0,
-            charIndex - 1
-          );
-          charIndex--;
-          setTimeout(erase, erasingDelay);
-        } else {
-          cursorSpan.classList.remove("typing");
-          textArrayIndex++;
-          if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-          setTimeout(type, typingDelay + 1100);
-        }
-      }
+      <div class="sosial-media">
+        <a
+          href="https://www.instagram.com/osismpkmetland.school/"
+          target="blank">
+          <i class="fab fa-instagram fa-2x"></i>
+          <h6>osismpkmetland.school</h6>
+        </a>
+        <a href="https://www.instagram.com/smkmetland/" target="blank">
+          <i class="fab fa-instagram fa-2x"> </i>
+          <h6>SMK Metland</h6>
+        </a>
+      </div>
+    </section>
 
-      document.addEventListener("DOMContentLoaded", function () {
-        if (textArray.length) setTimeout(type, newTextDelay + 250);
-      });
-    </script>
+    <!-- About -->
+    <section id="about" class="main-section">
+      <div class="main-section__text">
+        <h2 class="animate__animated animate__bounce">
+          <span>Apa itu</span> Osis & Mpk
+        </h2>
+        <p>
+          Organisasi Osis Smk Metland Merupakan organisasi intra sekolah yang
+          menaungi seluruh organisasi yang ada di Smk Metland,Melandasi
+          Penerapan Generasi Cinta Prestasi
+        </p>
+      </div>
+    </section>
+
+    <section id="picture" class="main-section">
+      <div class="main-section__text">
+        <h2 class="project-isi">Gambar</h2>
+      </div>
+
+      <div class="main-section__content">
+        <div class="slider">
+          <div class="slide-container">
+            <article class="slide">
+              <figure class="slide-picture">
+                <img src="picture/kor1.JPG" alt="Engxzu" />
+              </figure>
+            </article>
+
+            <article class="slide">
+              <figure class="slide-picture">
+                <img src="picture/struktur.jpg" alt="Vencvel" />
+              </figure>
+            </article>
+
+            <article class="slide">
+              <figure class="slide-picture">
+                <img src="picture/kok.png" alt="Vencvel" />
+              </figure>
+            </article>
+
+            <article class="slide">
+              <figure class="slide-picture">
+                <img src="picture/17.jpg" alt="Vencvel" />
+              </figure>
+            </article>
+          </div>
+
+          <div class="dots-container">
+            <span data-slide="1" class="dot active"></span>
+            <span data-slide="2" class="dot"></span>
+            <span data-slide="3" class="dot"></span>
+            <span data-slide="4" class="dot"></span>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button class="btn" id="prev"><</button>
+          <button class="btn" id="next">></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section id="project" class="main-section">
+      <div class="main-section__text">
+        <h2>Divisi <span>Osis</span></h2>
+      </div>
+      <div class="main-section__content gallery">
+        <div class="cardd">
+          <img src="KOOR/bph.png" alt="" />
+          <div class="img-title">
+            <h3>BPH</h3>
+            <p>BADAN PENGURUS HARIAN</p>
+          </div>
+        </div>
+        <div class="cardd">
+          <img src="KOOR/KOOR1.png" alt="" />
+        </div>
+        <div class="cardd">
+          <img src="KOOR/KOOR2.png" alt="" />
+        </div>
+        <div class="cardd">
+          <img src="KOOR/KOOR3.PNG" alt="" />
+        </div>
+        <div class="cardd">
+          <img src="KOOR/KOOR4.png" alt="" />
+        </div>
+        <div class="cardd">
+          <img src="KOOR/KOOR5.png" alt="" />
+        </div>
+        <div class="cardd">
+          <img src="KOOR/KOOR6.png" alt="" />
+        </div>
+        <div class="cardd">
+          <img src="KOOR/KOOR7.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Tugas Tugas -->
+    <section id="tugas" class="main-section">
+      <div class="main-section__text">
+        <h2>Tugas-Tugas <span>divisi</span></h2>
+      </div>
+
+      <div class="main-section__content card-container">
+        <article class="card">
+          <h5 class="card-title">
+            Sekbid keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa
+          </h5>
+          <ol class="card-text">
+            <li>
+              Melaksanakan peribadatan sesuai dengan ketentuan agama
+              masing-masing
+            </li>
+            <li>Memperingati hari-hari besar keagamaan</li>
+            <li>Melaksanakan perbuatan amaliah sesuai dengan norma agama</li>
+            <li>Membina toleransi kehidupan antar umat beragama</li>
+            <li>Mengadakan kegiatan lomba yang bernuansa keagamaan</li>
+            <li>
+              Mengembangkan dan memberdayakan kegiatan keagamaan di sekolah
+            </li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">
+            Sekbid budi pekerti luhur atau akhlak mulia
+          </h5>
+          <p class="card-text"></p>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">Good Comunication</h5>
+          <p class="card-text">
+            Communication is definitely the most important in work, i can speak
+            english a little bit.
+          </p>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">Healty Relationship</h5>
+          <p class="card-text">
+            No dramas or difficult relationships. I’m here to make your life
+            easier, solve your problems, and grow your bussiness.
+          </p>
+        </article>
+
+        <article class="card">
+          <h5 class="card-title">
+            Sekbid keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa
+          </h5>
+          <ol class="card-text">
+            <li>
+              Melaksanakan peribadatan sesuai dengan ketentuan agama
+              masing-masing
+            </li>
+            <li>Memperingati hari-hari besar keagamaan</li>
+            <li>Melaksanakan perbuatan amaliah sesuai dengan norma agama</li>
+            <li>Membina toleransi kehidupan antar umat beragama</li>
+            <li>Mengadakan kegiatan lomba yang bernuansa keagamaan</li>
+            <li>
+              Mengembangkan dan memberdayakan kegiatan keagamaan di sekolah
+            </li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonial-->
+    <section id="testimonial" class="main-section">
+      <div class="main-section__content quote">
+        <figure class="quote__text">
+          <i class="fas fa-quote-left fa-4x"></i>
+          <blockquote>MINTA QUOTES NYA BUND HEHE</blockquote>
+          <figcaption>
+            <span class="quote__author">Winda Sulistio Ningsih S.S</span>,
+            Pembina OSIS
+          </figcaption>
+        </figure>
+        <figure class="quote__image">
+          <img src="picture/bunda.png" class="img-bun" width="400" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="main-section">
+      <div class="main-section__text">
+        <h2>Hubungi Kami</h2>
+      </div>
+
+      <div class="main-section__content form-container">
+        <dialog class="form-alert">
+          <p><strong>Terima kasih!</strong> Kami telah menerima pesan kamu.</p>
+          <form>
+            <button
+              type="button"
+              class="btn btn--close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+              autofocus>
+              Tutup dialog ini
+            </button>
+          </form>
+        </dialog>
+
+        <form id="form" name="contact-my-website">
+          <label for="name" class="form-label">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            aria-describedby="name"
+            name="nama"
+            placeholder="nama kamu"
+            required />
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="email"
+            name="email"
+            placeholder="email kamu"
+            required />
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Pesan</label
+          >
+          <textarea
+            class="form-control"
+            id="pesan"
+            rows="3"
+            name="pesan"
+            placeholder="pesan kamu"
+            required></textarea>
+          <button type="submit" class="btn btn--submit show">Send</button>
+
+          <button class="btn btn--loading" disabled>
+            <span role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <p>@2023althafdeveloped</p>
+      </div>
+      <div>
+        <i class="fab fa-instagram fa-2x"></i>
+        <a href="https://www.instagram.com/mr.althf/" target="_blank">
+          Follow My instagram
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
